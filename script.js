@@ -3,7 +3,7 @@ main(); // executar a função main
 function main() {
     var livros = [
         {
-            issn: 1234,
+            issn: 1,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -11,7 +11,7 @@ function main() {
         },
     
         {
-            issn: 1234,
+            issn: 2,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -19,7 +19,7 @@ function main() {
         },
     
         {
-            issn: 1234,
+            issn: 3,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -27,7 +27,7 @@ function main() {
         },
     
         {
-            issn: 1234,
+            issn: 4,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -35,7 +35,7 @@ function main() {
         },
     
         {
-            issn: 1234,
+            issn: 5,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -43,7 +43,7 @@ function main() {
         },
     
         {
-            issn: 1234,
+            issn: 20,
             nome: "Pequeno Príncipe",
             autor: "Francês",
             editora: "Viva",
@@ -51,10 +51,10 @@ function main() {
         }
     ]
 
-    preencherTabela(".tbl-body", livros, "issn");
+    preencherTabela(".tbl-body", livros, "issn", "nome");
 }
 
-function preencherTabela(identificadorCorpoTabela, dados, nomeColunaCongelada) {
+function preencherTabela(identificadorCorpoTabela, dados, nomeColunaCongelada1, nomeColunaCongelada2) {
 
     const tblBody = document.querySelectorAll(identificadorCorpoTabela);
 
@@ -70,9 +70,12 @@ function preencherTabela(identificadorCorpoTabela, dados, nomeColunaCongelada) {
 
                     const novaColuna = document.createElement("td");
 
-                    if(atributo == nomeColunaCongelada)
+                    if(atributo == nomeColunaCongelada1)
                     {
-                        novaColuna.classList.add("congelar");
+                        novaColuna.classList.add("congelar-col1");
+                        novaColuna.classList.add("col");
+                    } else if (atributo == nomeColunaCongelada2) {
+                        novaColuna.classList.add("congelar-col2");
                         novaColuna.classList.add("col");
                     }
 

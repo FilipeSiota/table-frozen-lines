@@ -50,14 +50,21 @@ html, body {
     overflow-y: auto;
 }
 
-.congelar {
+.congelar-col1 {
     position: sticky;
     top: 0;
     left: 0;
     background-color: inherit;
 }
 
-.congelar.col {
+.congelar-col2 {
+    position: sticky;
+    top: 0;
+    left: 57px;
+    border: 1px solid black;
+}
+
+.congelar-col1.col, .congelar-col2.col {
     background-color: gray;
     color: white;
 }
@@ -66,7 +73,7 @@ html, body {
     z-index: 2;
 }
 
-table {
+.tabela-scroll table {
     border: none;
     border-collapse: collapse;
     position: relative;
@@ -75,22 +82,22 @@ table {
     width: 100%;
 }
 
-table th, table td {
+.tabela-scroll table th, .tabela-scroll table td {
     border: 1px solid black;
     padding: 10px 20px;
 }
 
-tbody tr:nth-child(odd) {
+.tabela-scroll tbody tr:nth-child(odd) {
     background-color: cadetblue;
     color: white;
 }
 
-tbody tr:nth-child(even) {
+.tabela-scroll tbody tr:nth-child(even) {
     background-color: aliceblue;
     color: black;
 }
 
-thead tr, thead tr th {
+.tabela-scroll thead tr, thead tr th {
     background-color: cornflowerblue;
     color: white;
     z-index: 1;
