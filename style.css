@@ -15,11 +15,6 @@ html, body {
     height: 100%;
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     padding: 10px;
 }
 
@@ -40,17 +35,16 @@ html, body {
 
 .tabela-scroll {
     display: block;
-    margin: 20px;
+    margin: 20px 0px;
 
-    height: 200px;
     max-width: 700px;
-    width: 400px;
+    width: 100%;
 
     overflow-x: auto;
     overflow-y: auto;
 }
 
-.congelar-col1 {
+.congelar-col1, .congelar {
     position: sticky;
     top: 0;
     left: 0;
@@ -60,8 +54,7 @@ html, body {
 .congelar-col2 {
     position: sticky;
     top: 0;
-    left: 57px;
-    border: 1px solid black;
+    left: 56px;
 }
 
 .congelar-col1.col, .congelar-col2.col {
@@ -83,7 +76,6 @@ html, body {
 }
 
 .tabela-scroll table th, .tabela-scroll table td {
-    border: 1px solid black;
     padding: 10px 20px;
 }
 
